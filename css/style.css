@@ -1,0 +1,14 @@
+*:not(xmp):not(code) {
+    font-family: 'Mountains of Christmas', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+
+xmp {
+    overflow: scroll;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+    font-style: oblique;
+    font-family: monospace;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="/hypes.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Oswald&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- <nav class="navbar default navbar-top">
+        <ul class="nav-list">
+            <li class="nav-title primary">
+                <a href="#">Home</a>
+            </li>
+            <li class="nav-item button">
+                <a href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">Home</a>
+            </li>
+        </ul>
+    </nav> -->
+
+    <nav class="sidebar sidebar-block color-style-2" id="sidebar">
+        <button class="sidebar-toggle" target="sidebar"></button>
+        <ul class="sidebar-list">
+            <li class="nav-item" active>
+                <a href="/">Home</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="page-content">
+        <img class="center-img br-t" src="/img/hypes-logo-1.svg" style="width: 20%;" alt="">
+        
+        <div class="offset">
+            <h1 class="left-text br-b">How and Why?</h1>
+            <p class="left-text">
+                <h4>What is it?</h4>
+                Hypes Is my own writen css/javascript framework.
+                Created with just css and javascript.
+                <h4>how did I came up with this project?</h4>
+                When I used bootstrap for schoolprojects I always felt like I missed some functions within it,
+                I was bad with css at the time but luckily have gotten better through the year. when I found out you could easily make your own css/javascript framework. 
+                I thought why not do it myself aswell.
+                <h4>why hypes?</h4>
+                I needed a name, And as you might know thinking of a new name for something is not the easiest thing to do.
+                To prevent myself from getting a headace over it I searched on google "project name generator".
+                Wich led me to a site where you could press the button and get random names.
+                It didn't take long before I saw the name "Hypes" I was not sure what it stands for?
+                But I knew liked it. so I decided to use it. And started the project wich led us to this point.
+                <br><br>
+            </p>
+            <h1 class="left-text br">Hypes documentation</h1>
+            <div class="br-t">
+                <h2>Docks</h2>
+                <p>A dock is essentially a position fixed container wich can be used to show the user data on top of the actual page.
+                    <br>There are 2 types of dock: Both look the same but have another functionality.
+                    <br>Class: <code>dock</code> is triggered by a button press and can be set up in this way:
+<br>
+<xmp><div class="dock rounded shadow slide" id="dock">
+    <div class="dock-content">
+        <p class="dock-title center-text br">Title goes here</p>
+
+        <p class="center-text br">You can add any element to the "dock-content" div.</p>
+
+        <div class="dock-container">
+            <button class="dock-close" dock-id="dock">Close</button>
+        </div>
+    </div>
+</div>
+</xmp>
+                    <br>Class: <code>dock-alert</code> is triggered on reload or when applied to existing dock with javascript. It can be made like this:
+<br>
+<xmp><div class="dock rounded shadow dock-alert slide" autoclose=2 id="warning">
+    <div class="dock-content">
+        <p class="dock-title">Dock title goes here</p>
+        <p>Place any element here.</p>
+    </div>
+</div>
+</xmp>
+                    <br><h3>Dock child elements</h3>
+                    <code>dock-container</code> wich is applied to a div shows all its containing elements with: <code>display: space between;</code>
+                    <br> This can be used to center a button or set 2 buttons in center with the same space around them.
+                    It works on other elements as well.
+                    <br>
+                    <br>To connect a trigger button to a dock your have to add this to your html:
+<br>
+<xmp><button class="dock-button" dock-id="dock">Open "dock"</button></xmp> 
+                    <br>This will create this button:
+                    <button class="btn dock-button" dock-id="dock">Open "dock"</button>
+                    <br>Try it out if you want it works.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div class="loadingscreen" loadingtime=1000>
+        <p class="loadingscreen-title">Fancy Loadingscreen</p>
+        <div class="progressbar progressbar-darker progressbar-glow purple" progress=100></div>
+        <p class="loadingscreen-bottomline">Please wait...</p>
+    </div> -->
+
+    <!-- Warnings -->
+
+    <div class="dock rounded dock-alert slide" remember id="note">
+        <div class="dock-content">
+            <p class="dock-title">Note:</p>
+
+            <p class="br center-text">hypes classes match with some classes of bootstrap there for they cant be used together</p>
+
+            <div class="dock-container">
+                <button class="dock-close br-all" dock-id="note">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dock rounded shadow dock-alert slide" remember id="welcome">
+        <div class="dock-content">
+            <p class="dock-title">Welcome</p>
+
+            <p class="br center-text">Welcome to the documentation site of "Hypes". I hope you deside to use it.</p>
+
+            <div class="dock-container">
+                <button class="dock-close br-all" dock-id="welcome">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- docks -->
+
+    <div class="dock rounded shadow slide" id="dock">
+        <div class="dock-content">
+            <p class="dock-title center-text br">Title goes here</p>
+    
+            <p class="center-text br">You can add any element to the "dock-content" div.</p>
+    
+            <div class="dock-container">
+                <button class="dock-close" dock-id="dock">Close</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="/hypes.js"></script>
+
+</html>
