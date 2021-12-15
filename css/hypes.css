@@ -1,0 +1,692 @@
+/*#region*/
+
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+:root {
+    --primary: rgb(36, 113, 255);
+    --simple-primary: rgb(27, 27, 27);
+    --simple-secondary: rgb(182, 182, 182);
+    --simple-text-primary: rgb(134, 134, 134);
+    --simple-text-secondary: rgb(255, 255, 255);
+
+    --sidebar-block-button-color: rgb(15, 15, 15);
+
+    --style1-border-color1: rgb(255, 133, 20);
+    --style1-border-color2: rgb(255, 24, 24);
+
+    --style2-border-color1: rgb(32, 255, 24);
+    --style2-border-color2: rgb(24, 170, 255);
+
+    --style3-border-color1: rgb(113, 24, 255);
+    --style3-border-color2: rgb(255, 24, 224);
+}
+
+.br {
+    padding: 1em 0;
+}
+
+.br-t {
+    padding-top: 1em;
+}
+
+.br-b {
+    padding-bottom: 1em;
+}
+
+.br-all {
+    padding: 1em;
+}
+
+.offset {
+    padding: 5%;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.center-img {
+    display: flex;
+    margin: 0 auto;
+}
+
+.btn {
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    background-color: gray;
+    padding: .2em .7em;
+}
+
+.btn-round {
+    border-radius: .3em;
+}
+
+.navbar {
+    padding: 1em 0;
+    background-color: var(--simple-primary);
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    margin: 0 0 1em 0;
+}
+
+.navbar.fixed {
+    position: fixed;
+}
+
+.nav-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-title {
+    margin: 0 1em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+}
+
+.nav-title a {
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    color: var(--simple-text-primary);
+}
+
+.nav-item {
+    margin: 0 .5em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-item.nav-right {
+    margin: 0 0 0 auto;
+}
+
+.nav-item.nav-left {
+    margin: 0 auto 0 0;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: var(--simple-text-primary);
+}
+
+.nav-item.button > a {
+   padding: .3em .7em;
+   width: fit-content;
+   height: fit-content;
+   background-color: var(--simple-secondary);
+   color: var(--simple-text-secondary);
+   border-radius: .5em;
+}
+
+.navbar.primary .nav-title > a {
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.navbar.default .nav-title > a {
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    color: var(--simple-text-primary);
+}
+
+.card * {
+    padding: 0;
+    margin: 0;
+}
+
+.card{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5em;
+    border: solid 1px;
+    border-color: gray;
+}
+
+.card > img.top-img {
+    border-radius: .5em .5em 0 0;
+}
+
+.card > img.bottom-img {
+    border-radius: 0 0 .5em .5em;
+}
+
+.card .card-body {
+    padding: 1em;
+}
+
+
+
+
+.card-block {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    padding: .5em;
+}
+
+.card-block .card-title {
+    font-weight: bold;
+    padding-left: .5em;
+}
+
+.card-block.card-description {
+    padding-left: .5em;
+}
+
+.card-block .card-body.centered {
+    margin: 0 auto;
+}
+
+.card > img {
+    width: 100%;
+}
+
+.card-block button {
+    border: none;
+    width: fit-content;
+    margin: 0 .7em;
+    background-color: rgb(53, 181, 255);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: .3em .8em;
+}
+
+
+/*#endregion*/
+
+/* #region page content*/
+
+.page-content {
+    width: auto;
+    height: auto;
+    transition: padding .5s;
+}
+
+/* #endregion page content*/
+
+
+/* #region sidebar base */
+
+.sidebar * {
+    margin: 0;
+    padding: 0;
+    font-family: initial;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background-color:rgb(27, 27, 27);
+    transition: left .5s;
+    left: -200px;
+}
+
+.sidebar-list {
+    margin-top: 2em;
+    list-style-type: none;
+}
+
+.sidebar .nav-item {
+  padding: .8em;
+  padding-left: 1.5em;
+  background-color: transparent; 
+}
+
+.sidebar .nav-item[active] {
+    padding: .8em;
+    padding-left: 2em;
+    background-color: white;  
+}
+
+.sidebar .nav-item * {
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar .nav-item[active] * {
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar-toggle.custom {
+    position: initial;
+    left: initial;
+    width: initial;
+    height: initial;
+    background-color: initial;
+    color: initial;
+    border-radius: initial;
+    border: initial;
+}
+
+.sidebar-toggle {
+    position: absolute;
+    left: 200px;
+    width: 51px;
+    height: 38px;
+    font-size: 19px;
+}
+
+/* #endregion sidebar base */
+
+/* #region sidebar block */
+
+.sidebar-list {
+    margin-top: 2em;
+    list-style-type: none;
+}
+
+.sidebar-block .nav-item {
+    padding: .6em;
+    padding-left: .5em;
+    background-color: var(--sidebar-block-button-color); 
+    margin: 1em 7%;
+    outline: .3em solid var(--sidebar-block-button-color);
+    border: white solid;
+    border-width: 0 0 0 .2em;
+}
+
+.sidebar-block .nav-item[active] {
+    padding: .6em;
+    padding-left: .5em;
+    background-color: var(--sidebar-block-button-color); 
+    margin: 1em 7%;
+    outline: .3em solid var(--sidebar-block-button-color);
+    border: white solid;
+    border-width: 0 0 0 .4em; 
+}
+
+.sidebar-block .nav-item * {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.sidebar-block .nav-item {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.sidebar-block .nav-item[active] * {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.sidebar-block .nav-item a {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.sidebar-block .sidebar-toggle {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border-radius: 0 0 .3em 0;
+    border: none;
+}
+
+
+/* #region colorstyle 1 */
+.sidebar-block.color-style-1 .nav-item:nth-child(even) {
+    border: var(--style1-border-color1) solid;
+    border-width: 0 0 0 .2em;
+}
+
+.sidebar-block.color-style-1 .nav-item:nth-child(odd) {
+    border: var(--style1-border-color2) solid;
+    border-width: 0 0 0 .2em;
+}
+
+.sidebar-block.color-style-1 .nav-item[active]:nth-child(even) {
+    border: var(--style1-border-color1) solid;
+    border-width: 0 0 0 .4em; 
+}
+
+.sidebar-block.color-style-1 .nav-item[active]:nth-child(odd) {
+    border: var(--style1-border-color2) solid;
+    border-width: 0 0 0 .4em; 
+}
+
+/* #endregion colorstyle 1 end */
+
+/* #region colorstyle 2 */
+.sidebar-block.color-style-2 .nav-item:nth-child(even) {
+    border: var(--style2-border-color1) solid;
+    border-width: 0 0 0 .2em;
+}
+
+.sidebar-block.color-style-2 .nav-item:nth-child(odd) {
+    border: var(--style2-border-color2) solid;
+    border-width: 0 0 0 .2em;
+}
+
+.sidebar-block.color-style-2 .nav-item[active]:nth-child(even) {
+    border: var(--style2-border-color1) solid;
+    border-width: 0 0 0 .4em; 
+}
+
+.sidebar-block.color-style-2 .nav-item[active]:nth-child(odd) {
+    border: var(--style2-border-color2) solid;
+    border-width: 0 0 0 .4em;
+}
+
+/* #endregion colorstyle 2 end */
+
+/* #region colorstyle 3 */
+.sidebar-block.color-style-3 .nav-item:nth-child(even) {
+    border: var(--style3-border-color1) solid;
+    border-width: 0 0 0 .2em;
+}
+
+.sidebar-block.color-style-3 .nav-item:nth-child(odd) {
+    border: var(--style3-border-color2) solid;
+    border-width: 0 0 0 .2em;
+}
+
+.sidebar-block.color-style-3 .nav-item[active]:nth-child(even) {
+    border: var(--style3-border-color1) solid;
+    border-width: 0 0 0 .4em; 
+}
+
+.sidebar-block.color-style-3 .nav-item[active]:nth-child(odd) {
+    border: var(--style3-border-color2) solid;
+    border-width: 0 0 0 .4em; 
+}
+
+/* #endregion colorstyle 3 end */
+
+/* #endregion sidebar block */
+
+/* #region dock base */
+
+.dock * {
+    z-index: 10000000;
+}
+
+.dock {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: none;
+}
+
+.dock-content {
+    padding: 1.5em;
+    margin: 0;
+    width: clamp(100px, 80%, 800px);
+    height: clamp(300px, fit-content, 600px);
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50vw;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    overflow-y: fixed;
+}
+
+.dock-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dock-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+.dock-content * {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.dock button {
+    border: none;
+    border-radius: .3em;
+    background-color: rgb(52, 164, 255);
+    color: white;
+    padding: .4em 2.4em;
+}
+
+.dock.slide *{
+    animation: fade .12s linear, slide .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide {
+    0% {
+        top: 45vh;
+    }
+}
+
+/* #endregion dock base */
+
+/* #region dock rounded */
+
+.dock.rounded > .dock-content {
+    border-radius: .5em;
+}
+
+.dock.shadow > .dock-content {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dock.border > .dock-content {
+    border: 2px solid black;
+}
+
+/* #endregion dock rounded */
+
+/* #region dock alert */
+
+.dock.dock-alert {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dock-title.dock-alert {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+}
+
+.dock-alert .dock-content {
+    width: clamp(100px, 80%, 500px);
+    height: clamp(300px, fit-content, 600px);
+    background-color: white;
+    border: none;
+}
+
+.dock-alert .dock-content * {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* #endregion dock alert */
+
+/* #region loading screen */
+
+.loadingscreen, .loadingscreen * {
+    position: absolute;
+    transition: opacity .5s;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.loadingscreen {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 99999999;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+}
+
+.loadingscreen-title {
+    font-size: clamp(2rem, -0.875rem + 8.333vw, 4.5rem);
+    font-weight: bold;
+    color: white;
+    left: 50vw;
+    transform: translate(-50%);
+    text-align: center;
+    top: 30vh;
+}
+
+.loadingscreen-bottomline {
+    font-size: clamp(.1rem, -0.875rem + 8.333vw, 1rem);
+    font-weight: normal;
+    color: white;
+    left: 10px;
+    text-align: left;
+    bottom: 10px;
+}
+
+.remove-fade, .remove-fade * {
+    opacity: 0;
+}
+
+/* #endregion loading screen */
+
+/* #region progress bar */
+
+.progressbar {
+    --progressbar-background-color: white;
+    background-color: var(--progressbar-background-color);
+    width: 100%;
+    height: 1.5em;
+    border-radius: 1em;
+    border: 3px solid var(--progressbar-background-color);
+}
+
+.loadingscreen > .progressbar {
+    width: 80vw;
+    left: 50vw;
+    transform: translate(-50%);
+    top: 47vh;
+}
+
+.bar {
+    --bar-color: rgb(44, 44, 44);
+    width: 0%;
+    height: 100%;
+    background-color: var(--bar-color);
+    transition: all 0.5s;
+    border-radius: 1em;
+}
+
+.progressbar-light {
+    --progressbar-background-color: white;
+}
+
+.progressbar-dark {
+    --progressbar-background-color: rgb(36, 36, 36);
+}
+
+.progressbar-darker {
+    --progressbar-background-color: rgb(20, 20, 20);
+}
+
+.progressbar-black {
+    --progressbar-background-color: rgb(0, 0, 0);
+}
+
+/* #endregion progress bar */
+
+/* #region progress bar glow*/
+
+.progressbar.progressbar-glow {
+    ----progressbar-background-color: rgb(34, 34, 34);
+    background-color: var(--progressbar-background-color);
+    height: 1.3em;
+    border-radius: .7em;
+    border: 3px solid var(--progressbar-background-color);
+}
+
+.progressbar-glow > .bar {
+    --bar-color: rgb(255, 255, 255);
+    width: 0%;
+    height: 100%;
+    background-color: var(--bar-color);
+    transition: all 0.5s;
+    border-radius: 1em;
+    box-shadow: 0 0 5px var(--bar-color),
+    0 0 5px var(--bar-color);
+}
+
+/* #endregion progress glow */
+
+/* #region progress bar colors*/
+
+.progressbar.red > .bar {
+    --bar-color: rgb(255, 0, 0);
+}
+
+.progressbar.orange > .bar {
+    --bar-color: rgb(255, 123, 0);
+}
+
+.progressbar.yellow > .bar {
+    --bar-color: rgb(255, 230, 0);
+}
+
+.progressbar.green > .bar {
+    --bar-color: rgb(43, 255, 0);
+}
+
+.progressbar.light-blue > .bar {
+    --bar-color: rgb(0, 255, 234);
+}
+
+.progressbar.blue > .bar {
+    --bar-color: rgb(0, 47, 255);
+}
+
+.progressbar.purple > .bar {
+    --bar-color: rgb(195, 0, 255);
+}
+
+.progressbar.warm-pink > .bar {
+    --bar-color: rgb(255, 0, 170);
+}
+
+/* #endregion progress glow */
+
