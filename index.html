@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Oswald&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -72,8 +71,10 @@
                 <h2>Docks</h2>
                 <p>A dock is essentially a position fixed container wich can be used to show the user data on top of the actual page.
                     <br>There are 2 types of dock: Both look the same but have another functionality.
-                    <br>Class: <code>dock</code> is triggered by a button press and can be set up in this way:
-<br>
+                    <div class="code-div">
+                        Class: <code>dock</code> is triggered by a button press and can be set up in this way:                
+                    </div>
+                    <br>
 <xmp><div class="dock rounded shadow slide" id="dock">
     <div class="dock-content">
         <p class="dock-title center-text br">Title goes here</p>
@@ -85,8 +86,10 @@
         </div>
     </div>
 </div>
-</xmp>
-                    <br>Class: <code>dock-alert</code> is triggered on reload or when applied to existing dock with javascript. It can be made like this:
+</xmp>              <br>
+                    <div class="code-div">
+                        Class: <code>dock-alert</code> is triggered on reload or when applied to existing dock with javascript. It can be made like this:
+                    </div>
 <br>
 <xmp><div class="dock rounded shadow dock-alert slide" autoclose=2 id="warning">
     <div class="dock-content">
@@ -96,11 +99,20 @@
 </div>
 </xmp>
                     <br><h3>Dock child elements</h3>
-                    <code>dock-container</code> wich is applied to a div shows all its containing elements with: <code>display: space between;</code>
-                    <br> This can be used to center a button or set 2 buttons in center with the same space around them.
-                    It works on other elements as well.
+                    <div class="code-div">
+                        <code>dock-title</code> This can be applied to text elements. It will make the text bold and bigger then the rest of the text inside the dock.
+                    </div>
                     <br>
-                    <br>To connect a trigger button to a dock your have to add this to your html:
+                    <div class="code-div">
+                        <code>dock-container</code> wich is applied to a div shows all its containing elements with: <code>display: space between;</code>
+                        <br> This can be used to center a button or set 2 buttons in center with the same space around them.
+                        It works on other elements as well.
+                    </div>
+                    <br>
+                    <div class="code-div">
+                        You can make a trigger button for a dock by adding the class <code>dock-button</code> and the target <code>dock-id</code> as a atribute
+                        <br>Here is an example:
+                    </div>
 <br>
 <xmp><button class="dock-button" dock-id="dock">Open "dock"</button></xmp> 
                     <br>This will create this button:
