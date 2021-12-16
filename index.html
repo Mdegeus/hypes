@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Oswald&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -47,79 +49,145 @@
 
     <div class="page-content">
         <img class="center-img br-t" src="./img/hypes-logo-1.svg" style="width: 20%;" alt="">
-        
+
         <div class="offset">
             <h1 class="left-text br-b">How and Why?</h1>
-            <p class="left-text">
-                <h4>What is it?</h4>
-                Hypes Is my own writen css/javascript framework.
+            <h4>What is it?</h4>
+            <p>Hypes Is my own writen css/javascript framework.
                 Created with just css and javascript.
-                <h4>how did I came up with this project?</h4>
-                When I used bootstrap for schoolprojects I always felt like I missed some functions within it,
-                I was bad with css at the time but luckily have gotten better through the year. when I found out you could easily make your own css/javascript framework. 
+            </p>
+            <h4>how did I came up with this project?</h4>
+            <p>When I used bootstrap for schoolprojects I always felt like I missed some functions within it,
+                I was bad with css at the time but luckily have gotten better through the year. when I found out you
+                could easily make your own css/javascript framework.
                 I thought why not do it myself aswell.
-                <h4>why hypes?</h4>
-                I needed a name, And as you might know thinking of a new name for something is not the easiest thing to do.
+            </p>
+            <h4>why hypes?</h4>
+            <p>I needed a name, And as you might know thinking of a new name for something is not the easiest thing to
+                do.
                 To prevent myself from getting a headace over it I searched on google "project name generator".
                 Wich led me to a site where you could press the button and get random names.
                 It didn't take long before I saw the name "Hypes" I was not sure what it stands for?
                 But I knew liked it. so I decided to use it. And started the project wich led us to this point.
-                <br><br>
             </p>
+            <br>
+            <br>
             <h1 class="left-text br">Hypes documentation</h1>
-            <div class="br-t">
-                <h2>Docks</h2>
-                <p>A dock is essentially a position fixed container wich can be used to show the user data on top of the actual page.
-                    <br>There are 2 types of dock: Both look the same but have another functionality.
-                    <div class="code-div">
-                        Class: <code>dock</code> is triggered by a button press and can be set up in this way:                
-                    </div>
-                    <br>
-<xmp><div class="dock rounded shadow slide" id="dock">
-    <div class="dock-content">
-        <p class="dock-title center-text br">Title goes here</p>
 
-        <p class="center-text br">You can add any element to the "dock-content" div.</p>
-
-        <div class="dock-container">
-            <button class="dock-close" dock-id="dock">Close</button>
-        </div>
-    </div>
-</div>
-</xmp>              <br>
-                    <div class="code-div">
-                        Class: <code>dock-alert</code> is triggered on reload or when applied to existing dock with javascript. It can be made like this:
-                    </div>
-<br>
-<xmp><div class="dock rounded shadow dock-alert slide" autoclose=2 id="warning">
-    <div class="dock-content">
-        <p class="dock-title">Dock title goes here</p>
-        <p>Place any element here.</p>
-    </div>
-</div>
-</xmp>
-                    <br><h3>Dock child elements</h3>
-                    <div class="code-div">
-                        <code>dock-title</code> This can be applied to text elements. It will make the text bold and bigger then the rest of the text inside the dock.
-                    </div>
-                    <br>
-                    <div class="code-div">
-                        <code>dock-container</code> wich is applied to a div shows all its containing elements with: <code>display: space between;</code>
-                        <br> This can be used to center a button or set 2 buttons in center with the same space around them.
-                        It works on other elements as well.
-                    </div>
-                    <br>
-                    <div class="code-div">
-                        You can make a trigger button for a dock by adding the class <code>dock-button</code> and the target <code>dock-id</code> as a atribute
-                        <br>Here is an example:
-                    </div>
-<br>
-<xmp><button class="dock-button" dock-id="dock">Open "dock"</button></xmp> 
-                    <br>This will create this button:
-                    <button class="btn dock-button" dock-id="dock">Open "dock"</button>
-                    <br>Try it out if you want it works.
+            <!-- Tags documentation -->
+            <h2 class="br-b">Tags</h2>
+            <p>The tag class can be aplied to all elements. It will change the element its aplied to to a box with small
+                padding.</p>
+            <p>Creating a tag is pretty straightforward. Just apply the tag class to the element you want to be a tag.
+                And you will get this:</p>
+            <div class="flex-row center-tags-h">
+                <p class="tag br-t">Tag</p>
+                <p class="tag round br-t">Round tag</p>
+                <p class="tag round light-blue br-t">Colored Tag</p>
+                <p class="tag round glow light-blue br-t">Colored Glowing Tag</p>
+                <p class="tag round glow light-blue dark br-t">Colored Glowing Dark Tag</p>
+                <p class="tag round light-blue light border br-t" tag-character=#>Light tag with character and border
                 </p>
             </div>
+            <div class="flex-row center-tags-h" tag-character=#>
+                <p class="tag round glow purple border light br">Tag</p>
+                <p class="tag round glow purple border light br">Tag</p>
+                <p class="tag round glow purple border light br">Tag</p>
+                <p class="tag round glow purple br">Tag</p>
+                <p class="tag round glow purple br">Tag</p>
+                <p class="tag round glow purple br">Tag</p>
+                <p class="tag round glow purple br">Tag</p>
+                <p class="tag round glow purple br">Tag</p>
+            </div>
+            <xmp>
+                <div class="dock rounded shadow slide" id="dock">
+                    <div class="dock-content">
+                        <p class="dock-title center-text br">Title goes here</p>
+
+                        <p class="center-text br">You can add any element to the "dock-content" div.</p>
+
+                        <div class="dock-container">
+                            <button class="dock-close" dock-id="dock">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </xmp>
+            <div class="code-div">
+                <p>Class: <code>dock</code> is triggered by a button press and can be set up in this way:</p>
+            </div>
+            <br>
+            <p>You can costumise a tag by giving it certain classes and/or atributes.</p>
+            <!-- Tags documentation End -->
+
+            <!-- Docks documentation -->
+            <h2 class="br-b">Docks</h2>
+            <p>A dock is essentially a position fixed container wich can be used to show the user data on top of the
+                actual page.</p>
+            <br>
+            <p>There are 2 types of dock: Both look the same but have another functionality.</p>
+            <div class="code-div">
+                <p>Class: <code>dock</code> is triggered by a button press and can be set up in this way:</p>
+            </div>
+            <br>
+            <xmp>
+                <div class="dock rounded shadow slide" id="dock">
+                    <div class="dock-content">
+                        <p class="dock-title center-text br">Title goes here</p>
+
+                        <p class="center-text br">You can add any element to the "dock-content" div.</p>
+
+                        <div class="dock-container">
+                            <button class="dock-close" dock-id="dock">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </xmp>
+            <br>
+            <div class="code-div">
+                <p>Class: <code>dock-alert</code> is triggered on reload or when applied to existing dock with
+                    javascript. It can be made like this:
+                </p>
+            </div>
+            <br>
+            <xmp>
+                <div class="dock rounded shadow dock-alert slide" autoclose=2 id="warning">
+                    <div class="dock-content">
+                        <p class="dock-title">Dock title goes here</p>
+                        <p>Place any element here.</p>
+                    </div>
+                </div>
+            </xmp>
+            <br>
+            <h3>Dock child elements</h3>
+            <div class="code-div">
+                <p><code>dock-title</code> This can be applied to text elements. It will make the text bold and bigger
+                    then the rest of the text inside the dock.</p>
+            </div>
+            <br>
+            <div class="code-div">Fancy
+                <code>dock-container</code>
+                <p>wich is applied to a div shows all its containing elements with:
+                    <code>display: space between;</code>
+                </p>
+                <br>
+                <p>This can be used to center a button or set 2 buttons in center with the same space around them.
+                    It works on other elements as well.
+                </p>
+            </div>
+            <br>
+            <div class="code-div">
+                <p>You can make a trigger button for a dock by adding the class <code>dock-button</code> and the target
+                    <code>dock-id</code> as a atribute
+                </p>
+                <br>
+                <p>Here is an example:</p>
+            </div>
+            <br>
+            <xmp><button class="dock-button" dock-id="dock">Open "dock"</button></xmp>
+            <br>This will create this button:
+            <button class="btn dock-button" dock-id="dock">Open "dock"</button>
+            <br>Try it out if you want it works.
+            <!-- Docks documentation End -->
         </div>
 
     </div>
@@ -146,7 +214,8 @@
         <div class="dock-content">
             <p class="dock-title">Note:</p>
 
-            <p class="br center-text">hypes classes match with some classes of bootstrap there for they cant be used together. Fix for this is comming.</p>
+            <p class="br center-text">hypes classes match with some classes of bootstrap there for they cant be used
+                together. Fix for this is comming.</p>
 
             <div class="dock-container">
                 <button class="dock-close br-all" dock-id="note">Close</button>
@@ -171,9 +240,9 @@
     <div class="dock rounded shadow slide" id="dock">
         <div class="dock-content">
             <p class="dock-title center-text br">Title goes here</p>
-    
+
             <p class="center-text br">You can add any element to the "dock-content" div.</p>
-    
+
             <div class="dock-container">
                 <button class="dock-close" dock-id="dock">Close</button>
             </div>

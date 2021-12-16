@@ -24,3 +24,8 @@ xmp {
 ::-webkit-progress-bar {
     color: rgb(47, 144, 255);
 }
+
+code {
+    background-color: rgba(0, 0, 0, 0.075);
+    padding: 1px;
+}
