@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
-    <link rel="stylesheet" href="./css/hypes.css">
+    <link rel="stylesheet" href="https://mdegeus.github.io/hypes-public/hypes.css">
     <link rel="stylesheet" href="./css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -132,11 +132,21 @@
 
     <!-- Warnings -->
 
+    <div class="dock rounded shadow dock-alert slide" remember id="welcome">
+        <div class="dock-content">
+            <p class="br center-text">This site uses Hypes too.</p>
+
+            <div class="dock-container">
+                <button class="dock-close br-all" dock-id="welcome">Close</button>
+            </div>
+        </div>
+    </div>
+
     <div class="dock rounded dock-alert slide" remember id="note">
         <div class="dock-content">
             <p class="dock-title">Note:</p>
 
-            <p class="br center-text">hypes classes match with some classes of bootstrap there for they cant be used together</p>
+            <p class="br center-text">hypes classes match with some classes of bootstrap there for they cant be used together. Fix for this is comming.</p>
 
             <div class="dock-container">
                 <button class="dock-close br-all" dock-id="note">Close</button>
@@ -172,6 +182,6 @@
 
 </body>
 
-<script src="./js/hypes.js"></script>
+<script src="https://mdegeus.github.io/hypes-public/hypes.js"></script>
 
 </html>
